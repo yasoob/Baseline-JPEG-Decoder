@@ -182,6 +182,8 @@ class HuffmanTable:
 
     def Find(self, st):
         r = self.root
+        if len(r) == 1:
+            return r[0]
         while isinstance(r, list):
             r = r[st.GetBit()]
         return r
